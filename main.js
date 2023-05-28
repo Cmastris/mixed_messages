@@ -25,3 +25,12 @@ function statementFactory(statement, sentiment) {
     };
 }
 
+
+function getRandIndex(length) {
+    /* Randomly choose an array index (int) based on the length of the array.
+    Params:
+        length (int): the length of the array.
+    */
+    return Math.floor(Math.random() * length);
+}
+
