@@ -19,9 +19,9 @@ function statementFactory(statement, sentiment) {
         sentiment (int): a representation of how positive/optimistic the statement is.
         -2 is very bad; -1 is bad; 0 is neutral; 1 is positive; 2 is very positive.
     */
-   return {
-    statement,
-    sentiment
-   };
+    return {
+        statement,
+        sentiment
+    };
 }
 
