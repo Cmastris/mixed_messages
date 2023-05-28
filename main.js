@@ -3,6 +3,14 @@ Every time a user runs a program, they should get a new, randomized output.
 The message that it outputs should be made up of at least three different pieces of data.
 */
 
+const statementData = [
+    ["This is very negative.", -2],
+    ["This is negative.", -1],
+    ["This is neutral.", 0],
+    ["This is positive.", 1],
+    ["This is very positive.", 2]
+];
+
 
 function statementFactory(statement, sentiment) {
     /* Generate statement objects.
