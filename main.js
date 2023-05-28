@@ -34,3 +34,29 @@ function getRandIndex(length) {
     return Math.floor(Math.random() * length);
 }
 
+
+function chooseStatements(count) {
+    /* Randomly choose statements to include in the horoscope,
+    generate statement objects, and return them in an array.
+    Params:
+        count (int): the number of statements to choose.
+    */
+
+    // Ensure count isn't greater than total available statements
+    const statementCount = statementData.length;
+    count = (count > statementCount) ? statementCount : count;
+
+    const indices = [];
+    const statements = [];
+    while (indices.length < count) {
+        let index = getRandIndex(statementCount);
+        // Add to arrays if not already present
+        if (!indices.includes(index)) {
+          indices.push(index);
+          let statement_arr = statementData[index];
+          statements.push(statementFactory(statement_arr[0], statement_arr[1]));
+        }
+    }
+    return statements;
+}
+
