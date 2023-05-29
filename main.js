@@ -75,6 +75,29 @@ function calculateAvgSentiment(statements) {
 }
 
 
+function generateSummary(sentiment_score) {
+    /* Return a sentence (str) that verbalises an average sentiment score,
+    i.e. summarises the overall sentiment of multiple statements.
+    Params:
+        sentiment_score (int): the average, rounded sentiment score of 1 or more statements.
+    */
+    switch (sentiment_score) {
+        case -2:
+            return "Very negative."
+        case -1:
+            return "Negative."
+        case 0:
+            return "Neutral."
+        case 1:
+            return "Positive."
+        case 2:
+            return "Very positive."
+        default:
+            return "Unclear."
+    }
+}
+
+
 function generateHoroscope(sentence_count) {
     /* Generate and return a random horoscope string containing 1 or more sentences.
     Params:
