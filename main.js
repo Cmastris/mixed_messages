@@ -24,6 +24,13 @@ const statementData = [
     ["This is a great time to ignite your relationships, both old and new!", 2]
 ];
 
+const neutralSummaries = [
+    "This week will feature difficult moments but joyous ones too.",
+    "Like many, this week will have its ups and downs.",
+    "The events of this week will be a mixed bag.",
+    "This week will be productive but not without its challenges."
+];
+
 
 function statementFactory(statement, sentiment) {
     /* Generate statement objects.
@@ -100,7 +107,7 @@ function generateSummary(sentiment_score) {
         case -1:
             return "This may be a difficult week, but remember that adversity presents an opportunity for growth.";
         case 0:
-            return "This week will feature difficult moments but joyous ones too.";
+            return neutralSummaries[getRandIndex(neutralSummaries.length)];
         case 1:
             return "This week appears promising, so try to make the most of it.";
         case 2:
