@@ -3,12 +3,25 @@ Every time a user runs a program, they should get a new, randomized output.
 The message that it outputs should be made up of at least three different pieces of data.
 */
 
+
+// Array of arrays in the form [text (str), sentiment (int; from -2 to 2 inclusive)]
 const statementData = [
-    ["This is very negative.", -2],
-    ["This is negative.", -1],
-    ["This is neutral.", 0],
-    ["This is positive.", 1],
-    ["This is very positive.", 2]
+    ["Life often presents us with challenges, and these are coming your way.", -2],
+    ["There are difficult and important choices ahead, so be sure to choose your path carefully.", -2],
+    ["Be careful not to spend too much effort on things that don't deserve it.", -1],
+    ["Regardless of how life is treating you, remember to be cautious; not everything is what it seems.", -1],
+    ["Those you are close to will need your support, but remember to look after yourself too.", -1],
+    ["Spontaneity can be a good thing, but be mindful of being too impulsive.", -1],
+    ["Don't be afraid to ask questions of yourself and others.", 0],
+    ["Try not to be overly critical of yourself; overcoming failure is a part of life.", 0],
+    ["Be sure to practice self-care and remember to set healthy boundaries.", 0],
+    ["Remember that you are an independent thinker who can be proud of doing things differently to others.", 1],
+    ["You possess a great deal of untapped potential, so seize the day!", 1],
+    ["Challenges have come your way recently, but the future is looking brighter.", 1],
+    ["Acknowledging and accepting your emotions will help you to navigate whatever life throws your way.", 1],
+    ["You may find your energy levels improving over the next few days, along with a renewed enthusiasm for life.", 2],
+    ["There will be a great opportunity in the days to come, but it may not be obvious so you must seek it out!", 2],
+    ["This is a great time to ignite your relationships, both old and new!", 2]
 ];
 
 
