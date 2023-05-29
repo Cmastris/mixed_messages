@@ -17,7 +17,7 @@ const statementData = [
     ["Be sure to practice self-care and remember to set healthy boundaries.", 0],
     ["Remember that you are an independent thinker who can be proud of doing things differently to others.", 1],
     ["You possess a great deal of untapped potential, so seize the day!", 1],
-    ["Challenges have come your way recently, but the future is looking brighter.", 1],
+    ["Despite challenges in the past and present, the future is looking brighter.", 1],
     ["Acknowledging and accepting your emotions will help you to navigate whatever life throws your way.", 1],
     ["You may find your energy levels improving over the next few days, along with a renewed enthusiasm for life.", 2],
     ["There will be a great opportunity in the days to come, but it may not be obvious so you must seek it out!", 2],
