@@ -60,3 +60,19 @@ function chooseStatements(count) {
     return statements;
 }
 
+
+function generateHoroscope(sentence_count) {
+    /* Generate and return a random horoscope string containing 1 or more sentences.
+    Params:
+        sentence_count (int): the number of sentences (statements) in the horoscope.
+    */
+    let horoscope = "";
+    let statement_objs = chooseStatements(sentence_count);
+
+    statement_objs.forEach(obj => horoscope += obj.statement + " ");
+    horoscope = horoscope.substring(0, horoscope.length - 1);  // Remove trailing space
+    return horoscope;
+}
+
+
+console.log(generateHoroscope(4));
