@@ -83,17 +83,17 @@ function generateSummary(sentiment_score) {
     */
     switch (sentiment_score) {
         case -2:
-            return "Very negative."
+            return "This could be a very challenging week, but through courage you can overcome it.";
         case -1:
-            return "Negative."
+            return "This may be a difficult week, but remember that adversity presents an opportunity for growth.";
         case 0:
-            return "Neutral."
+            return "This week will feature difficult moments but joyous ones too.";
         case 1:
-            return "Positive."
+            return "This week appears promising, so try to make the most of it.";
         case 2:
-            return "Very positive."
+            return "This should be a very positive week, full of opportunity.";
         default:
-            return "Unclear."
+            return "This week is shrouded in the fog of uncertainty.";
     }
 }
 
