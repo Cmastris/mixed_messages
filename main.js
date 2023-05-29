@@ -61,6 +61,20 @@ function chooseStatements(count) {
 }
 
 
+function calculateAvgSentiment(statements) {
+    /* Calculate and return the average, rounded sentiment score of an array of statements.
+    Params:
+        statements (arr of obj): an array of statement objects.
+    */
+    let totalSentiment = 0;
+    statements.forEach(obj => totalSentiment += obj.sentiment);
+    
+    let avgSentiment = Math.round(totalSentiment / statements.length);
+    avgSentiment = (avgSentiment === -0) ? 0 : avgSentiment;  // Fix -0 rounding issue
+    return avgSentiment;
+}
+
+
 function generateHoroscope(sentence_count) {
     /* Generate and return a random horoscope string containing 1 or more sentences.
     Params:
