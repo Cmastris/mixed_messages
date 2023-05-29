@@ -99,17 +99,22 @@ function generateSummary(sentiment_score) {
 
 
 function generateHoroscope(sentence_count) {
-    /* Generate and return a random horoscope string containing 1 or more sentences.
+    /* Generate and return a random horoscope string containing 2 or more sentences.
     Params:
-        sentence_count (int): the number of sentences (statements) in the horoscope.
+        sentence_count (int, >= 2): the number of sentences (statements) in the horoscope.
     */
-    let horoscope = "";
-    let statement_objs = chooseStatements(sentence_count);
-
+    let statement_objs = chooseStatements(sentence_count - 1);  // Count excluding summary
+    let summary = generateSummary(calculateAvgSentiment(statement_objs));
+    
+    let horoscope = summary + " ";
     statement_objs.forEach(obj => horoscope += obj.statement + " ");
     horoscope = horoscope.substring(0, horoscope.length - 1);  // Remove trailing space
     return horoscope;
 }
 
 
+console.log(generateHoroscope(2));
+console.log("");
+console.log(generateHoroscope(3));
+console.log("");
 console.log(generateHoroscope(4));
